@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#142b42">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A private, offline-friendly expense tracker with monthly history and category comparison.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Pocket Ledger">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Pocket Ledger</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 9h18"/><path d="M15 15h2"/></svg></div>
+        <div><div class="brand-name">Pocket Ledger</div><div class="brand-sub">YOUR SPENDING, SIMPLIFIED</div></div>
+      </div>
+      <div class="status-dot" title="Your purchases stay on this device"><span></span> Private &amp; local</div>
+    </header>
+
+    <main id="main-content" class="main-content" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-tab is-active" data-tab="home" type="button" aria-label="Overview" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>
+        <span>Overview</span>
+      </button>
+      <button class="nav-tab" data-tab="purchases" type="button" aria-label="Purchases">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+        <span>Purchases</span>
+      </button>
+      <button class="nav-tab" data-tab="compare" type="button" aria-label="Compare spending">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-9M22 20v-14"/></svg>
+        <span>Compare</span>
+      </button>
+      <button class="nav-tab" data-tab="settings" type="button" aria-label="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="m19.4 15 .7 1.3-2.2 2.2-1.3-.7a8 8 0 0 1-2 .8l-.4 1.5h-3.1l-.4-1.5a8 8 0 0 1-2-.8l-1.3.7-2.2-2.2.7-1.3a8 8 0 0 1-.8-2L3.6 12v-3l1.5-.4a8 8 0 0 1 .8-2l-.7-1.3L7.4 3l1.3.7a8 8 0 0 1 2-.8L11.1 1.5h3.1l.4 1.4a8 8 0 0 1 2 .8l1.3-.7 2.2 2.2-.7 1.3a8 8 0 0 1 .8 2l1.5.4V12l-1.5.4a8 8 0 0 1-.8 2Z" transform="translate(-.6 1.1) scale(.98)"/></svg>
+        <span>Settings</span>
+      </button>
+    </nav>
+    <button class="floating-add" id="quick-add" type="button" aria-label="Add purchase"><span aria-hidden="true">+</span></button>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
